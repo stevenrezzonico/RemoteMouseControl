@@ -10,3 +10,9 @@ C:\Users\Steven\Documents\Visual Studio 2012\Projects\Android\RemoteMouseControl
 C:\git\RemoteMouseControl\RemoteMouseControl\bin\Release\RemoteMouseControl.exe.config
 C:\git\RemoteMouseControl\RemoteMouseControl\obj\Release\RemoteMouseControl.exe
 C:\git\RemoteMouseControl\RemoteMouseControl\obj\Release\RemoteMouseControl.pdb
+C:\git\RemoteMouseControl\RemoteMouseControl\bin\Release\RemoteMouseControl.exe
+C:\git\RemoteMouseControl\RemoteMouseControl\bin\Release\RemoteMouseControl.pdb
+C:\git\RemoteMouseControl\RemoteMouseControl\obj\Release\RemoteMouseControl.csprojResolveAssemblyReference.cache
+C:\git\RemoteMouseControl\RemoteMouseControl\obj\Release\RemoteMouseControl.MainWindow.resources
+C:\git\RemoteMouseControl\RemoteMouseControl\obj\Release\RemoteMouseControl.Properties.Resources.resources
+C:\git\RemoteMouseControl\RemoteMouseControl\obj\Release\RemoteMouseControl.csproj.GenerateResource.Cache

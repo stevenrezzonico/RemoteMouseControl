@@ -76,8 +76,8 @@ namespace RemoteMouseControl {
 
                 //MessageBox.Show("X:" + MousePosition.X + " Y:" + MousePosition.Y);
 
-                int newX = MousePosition.X + MousePosition.X * x / 100;
-                int newY = MousePosition.Y + MousePosition.Y * y / 100;
+                int newX = MousePosition.X + Screen.PrimaryScreen.Bounds.Width * x / 100;
+                int newY = MousePosition.Y + Screen.PrimaryScreen.Bounds.Height * y / 100;
 
                 //MessageBox.Show("X:" + newX + " Y:" + newY);
 

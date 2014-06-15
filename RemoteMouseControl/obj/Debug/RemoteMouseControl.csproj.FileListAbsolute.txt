@@ -1,0 +1,9 @@
+c:\users\steven\documents\visual studio 2012\Projects\Android\RemoteMouseControl\RemoteMouseControl\bin\Debug\RemoteMouseControl.exe
+c:\users\steven\documents\visual studio 2012\Projects\Android\RemoteMouseControl\RemoteMouseControl\bin\Debug\RemoteMouseControl.pdb
+c:\users\steven\documents\visual studio 2012\Projects\Android\RemoteMouseControl\RemoteMouseControl\obj\Debug\RemoteMouseControl.csprojResolveAssemblyReference.cache
+c:\users\steven\documents\visual studio 2012\Projects\Android\RemoteMouseControl\RemoteMouseControl\obj\Debug\RemoteMouseControl.Properties.Resources.resources
+c:\users\steven\documents\visual studio 2012\Projects\Android\RemoteMouseControl\RemoteMouseControl\obj\Debug\RemoteMouseControl.csproj.GenerateResource.Cache
+c:\users\steven\documents\visual studio 2012\Projects\Android\RemoteMouseControl\RemoteMouseControl\obj\Debug\RemoteMouseControl.exe
+c:\users\steven\documents\visual studio 2012\Projects\Android\RemoteMouseControl\RemoteMouseControl\obj\Debug\RemoteMouseControl.pdb
+c:\users\steven\documents\visual studio 2012\Projects\Android\RemoteMouseControl\RemoteMouseControl\bin\Debug\RemoteMouseControl.exe.config
+c:\users\steven\documents\visual studio 2012\Projects\Android\RemoteMouseControl\RemoteMouseControl\obj\Debug\RemoteMouseControl.MainWindow.resources

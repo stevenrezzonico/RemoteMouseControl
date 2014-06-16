@@ -64,7 +64,7 @@ namespace RemoteMouseControl {
                 int recv = sock.ReceiveFrom(data, ref ep);
 
                 string stringData = Encoding.UTF8.GetString(data, 0, recv);
-                MessageBox.Show(stringData);
+                //MessageBox.Show(stringData);
 
                 string[] arrayData = stringData.Split(';');
 

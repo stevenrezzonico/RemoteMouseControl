@@ -14,7 +14,9 @@ using System.Windows.Forms;
 
 namespace RemoteMouseControl {
     public partial class MainWindow : Form {
+
         private Task listenerTask;
+        private bool running;
 
         //DLL used to set cursor´s position
         [DllImport("user32.dll")]
@@ -24,6 +26,7 @@ namespace RemoteMouseControl {
             InitializeComponent();
 
             //Receiver backgroud task
+            running = true;
             listenerTask = Task.Factory.StartNew(ListenMessages, TaskCreationOptions.LongRunning);
             listenerTask.ContinueWith(t => { }, TaskScheduler.FromCurrentSynchronizationContext());
 
@@ -54,13 +57,14 @@ namespace RemoteMouseControl {
         }
 
         private void ListenMessages() {
-            while (true) {
-                var sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-                var iep = new IPEndPoint(IPAddress.Any, Properties.Settings.Default.Port);
-                sock.Bind(iep);
-                var ep = (EndPoint)iep;
 
-                var data = new byte[32];
+            var sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+            var iep = new IPEndPoint(IPAddress.Any, Properties.Settings.Default.Port);
+            sock.Bind(iep);
+            var ep = (EndPoint)iep;
+            var data = new byte[32];
+
+            while (running) {
                 int recv = sock.ReceiveFrom(data, ref ep);
 
                 string stringData = Encoding.UTF8.GetString(data, 0, recv);
@@ -76,8 +80,8 @@ namespace RemoteMouseControl {
 
                 //MessageBox.Show("X:" + MousePosition.X + " Y:" + MousePosition.Y);
 
-                int newX = MousePosition.X + Screen.PrimaryScreen.Bounds.Width * x / 100;
-                int newY = MousePosition.Y + Screen.PrimaryScreen.Bounds.Height * y / 100;
+                int newX = MousePosition.X + Screen.PrimaryScreen.Bounds.Width * x / 1000;
+                int newY = MousePosition.Y + Screen.PrimaryScreen.Bounds.Height * y / 1000;
 
                 //MessageBox.Show("X:" + newX + " Y:" + newY);
 
@@ -85,9 +89,9 @@ namespace RemoteMouseControl {
                 //yLabel.Text = "Delta Y: " + y;
 
                 BeginInvoke(new Action(() => SetCursorPos(newX, newY)));
-
-                sock.Close();
+                
             }
+            sock.Close();
         }
     }
 }
